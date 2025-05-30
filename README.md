@@ -1,96 +1,62 @@
 # Legal Office Hours Website
 
-A professional website showcasing legal support provided during hack days, with automatic updates from Google Sheets.
+A professional website showcasing legal support provided during Hack Days 38.
 
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **Auto-Updates**: Automatically syncs with Google Sheets when new projects are added
 - **Professional Layout**: Clean, modern design with hover effects
 - **Real Project Data**: Showcases actual legal consultations and advice
+- **Complete Team Showcase**: Features all 18 legal team members
+- **Dual Project Display**: Shows both supported projects and team-built projects
 
-## 🔄 Auto-Update System
+## 📊 Content Sections
 
-The website automatically updates when new projects are added to the Google Sheet:
+### **Hack Days Projects We Supported**
+- 26 projects where the legal team provided expert advice
+- Detailed descriptions of legal guidance provided
+- Legal advisor credits for each project
 
-### How It Works:
-1. **Google Sheets Integration**: Pulls data from your published CSV
-2. **GitHub Actions**: Runs every hour to check for updates
-3. **Automatic Deployment**: Updates the website and deploys to GitHub Pages
+### **Projects the Legal Team Hacked On**
+- 6 innovative projects built by legal team members
+- Links to official hack days project pages
+- Project IDs for reference
 
-### Setup Instructions:
-
-1. **Enable GitHub Actions** (if not already enabled):
-   - Go to your repository settings
-   - Navigate to "Actions" → "General"
-   - Ensure "Allow all actions and reusable workflows" is selected
-
-2. **The system is ready!** It will:
-   - Check for updates every hour
-   - Automatically commit changes when new projects are detected
-   - Deploy to GitHub Pages within minutes
-
-### Manual Update:
-You can also trigger an update manually:
-- Go to "Actions" tab in your GitHub repository
-- Click "Update Projects from Google Sheets"
-- Click "Run workflow"
-
-## 📊 Google Sheets Format
-
-Your spreadsheet should have these columns:
-- **Column A**: Hacker Name
-- **Column B**: Hack Days Project Link
-- **Column C**: Legal Advice Provided / Notes  
-- **Column D**: Lawyer who provided Advice
-
-## 🛠️ Local Development
-
-To test the update script locally:
-
-```bash
-# Install dependencies
-npm install
-
-# Run the update script
-npm run update
-```
+### **Office Hours Team**
+- Complete roster of 18 legal professionals
+- Team statistics and impact metrics
+- Professional team description
 
 ## 📁 File Structure
 
 ```
 ├── index.html              # Main website file
 ├── styles.css              # Website styling
-├── update-projects.js      # Auto-update script
-├── package.json           # Node.js dependencies
-├── .github/workflows/     # GitHub Actions automation
-└── README.md             # This file
+└── README.md              # This file
 ```
 
 ## 🎨 Customization
 
-To modify the design:
+To modify the website:
 - Edit `styles.css` for styling changes
 - Edit `index.html` for content changes
-- The projects section is auto-generated - don't edit it manually
+- All content is static and easily maintainable
 
 ## 📈 Adding New Projects
 
-Simply add a new row to your Google Sheet with:
-1. Hacker name
-2. Project link (or "n/a" if none)
-3. Legal advice description
-4. Lawyer name(s)
+To add new projects:
+1. Edit the `index.html` file
+2. Add new project cards following the existing format
+3. Update project counts in the hero and team sections
+4. Commit and push changes to GitHub
 
-The website will automatically update within an hour!
+## 🌐 Deployment
 
-## 🔧 Troubleshooting
+The website is deployed via GitHub Pages at:
+`https://maliadupuis.github.io/LegalOfficeHours`
 
-If auto-updates aren't working:
-1. Check the "Actions" tab for error logs
-2. Ensure your Google Sheet is published to web as CSV
-3. Verify the CSV URL in `update-projects.js` is correct
+Changes are automatically deployed when pushed to the main branch.
 
 ---
 
-**Legal Office Hours** - Professional legal support for modern businesses. 
+**Legal Office Hours** - Showcasing professional legal support during Hack Days 38. 
